@@ -1,17 +1,11 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Listing Page</title>
+<title>Vegan cakes - welcome</title>
+<link rel="stylesheet" type="text/css" href="./styles/styles.css" />
 </head>
 <body>
-    <h1>Welcome to the Listing Page</h1>
-
-    <div id="user-info">
-        <!-- User information will be displayed here -->
-        Logged in as: ${sessionScope.user}<br>
-        First Name: ${sessionScope.firstName}<br>
-        Last Name: ${sessionScope.lastName}
-    </div>
+   	<jsp:include page="includes/header.jsp" />
+   	<img alt="" src="./images/cake.jpg">
 </body>
 </html>
