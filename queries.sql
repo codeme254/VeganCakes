@@ -19,3 +19,15 @@ password varchar(50) not null
 
 INSERT INTO Admins (username, password) VALUES ('admin', 'vcakes@admin2023');
 select * from Admins;
+
+CREATE TABLE Products (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    cake_image VARCHAR(500),
+    cake_name VARCHAR(50),
+    cake_description VARCHAR(500),
+    cake_category VARCHAR(50),
+    cake_quantity INT CHECK (cake_quantity >= 0),
+    cake_price INT CHECK (cake_price >= 1)
+);
+select * from Products;
+

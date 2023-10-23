@@ -49,4 +49,24 @@
     <servlet-name>AdminLoginServlet</servlet-name>
     <url-pattern>/AdminLoginServlet</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>NeProductServlet</display-name>
+    <servlet-name>NeProductServlet</servlet-name>
+    <servlet-class>com.vegancakes.NeProductServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>NeProductServlet</servlet-name>
+    <url-pattern>/NeProductServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>NewProductServlet</display-name>
+    <servlet-name>NewProductServlet</servlet-name>
+    <servlet-class>com.vegancakes.NewProductServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>NewProductServlet</servlet-name>
+    <url-pattern>/NewProductServlet</url-pattern>
+  </servlet-mapping>
 </web-app>
