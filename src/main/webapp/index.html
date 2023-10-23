@@ -2,7 +2,7 @@
 <html>
   <head>
     <title>Login</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="./styles/styles.css" />
     <style>
       .login-container {
         min-height: 60vh;
@@ -28,7 +28,8 @@
         color: #333;
       }
       input[type="text"],
-      input[type="password"] {
+      input[type="password"],
+      input[type="email"] {
         width: 100%;
         padding: 10px;
         margin: 5px 0;
@@ -69,9 +70,9 @@
     <div class="login-container">
       <div class="login-inner">
         <h2>Login</h2>
-        <form action="your_login_processing_script.php" method="POST">
-          <label for="username">Username:</label>
-          <input type="text" id="username" name="username" required />
+        <form action="LoginServlet" method="POST">
+          <label for="email">Email:</label>
+          <input type="email" id="username" name="email" required />
 
           <label for="password">Password:</label>
           <input type="password" id="password" name="password" required />
