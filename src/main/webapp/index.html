@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+    <link rel="stylesheet" href="styles.css" >
+    <style>
+        .login-container{
+			min-height: 60vh;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		.login-welcome{
+			text-align: center;
+			margin-top: 8rem;
+		}
+        h2 {
+            color: #333;
+        }
+        form {
+            min-width: 500px;
+            margin: 0 auto;
+            margin-right: 2rem;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+            color: #333;
+        }
+        input[type="text"], input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        input[type="submit"] {
+            background-color: #007BFF;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        p {
+            margin-top: 10px;
+        }
+        a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .login-inner{
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+		}
+    </style>
+</head>
+<body>
+	<h2 class="login-welcome">Welcome to vegan cakes, login to your account</h2>
+    <div class="login-container">
+		<div class="login-inner">
+			<h2>Login</h2>
+		    <form action="your_login_processing_script.php" method="POST">
+		        <label for="username">Username:</label>
+		        <input type="text" id="username" name="username" required>
+		
+		        <label for="password">Password:</label>
+		        <input type="password" id="password" name="password" required>
+		
+		        <input type="submit" value="Log In">
+		    </form>
+    		<p>Don't have an account? <a href="register.html">Sign up</a></p>
+		</div>
+		<img src="./images/cake.jpg" />
+	</div>
+</body>
+</html>
