@@ -69,4 +69,14 @@
     <servlet-name>NewProductServlet</servlet-name>
     <url-pattern>/NewProductServlet</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ExploreServlet</display-name>
+    <servlet-name>ExploreServlet</servlet-name>
+    <servlet-class>com.vegancakes.ExploreServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ExploreServlet</servlet-name>
+    <url-pattern>/ExploreServlet</url-pattern>
+  </servlet-mapping>
 </web-app>
