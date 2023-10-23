@@ -47,3 +47,62 @@ body {
 .user-greeting {
   font-weight: bold;
 }
+
+
+.admin-header {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Title styles */
+.admin-title {
+    font-size: 24px;
+}
+
+.admin-header {
+    display: flex;
+    justify-content: space-between;
+    background-color: #007BFF;
+    color: #fff;
+    padding: 10px;
+    align-items: center;
+}
+
+/* Title styles */
+.admin-title {
+    font-size: 24px;
+    margin: 0;
+}
+
+/* Navigation styles */
+.admin-header{
+	padding: 2rem 5rem;
+}
+
+.admin-header-right {
+    display: flex;
+    align-items: center;
+}
+
+.admin-nav-list {
+    list-style-type: none;
+    padding: 0;
+    margin-right: 10px;
+}
+
+.admin-nav-item {
+    display: inline-block;
+    margin-right: 5rem;
+}
+
+.admin-nav-link {
+    text-decoration: none;
+    color: #fff;
+}
+
+/* User greeting styles */
+.admin-user-greeting {
+    font-weight: normal;
+}
