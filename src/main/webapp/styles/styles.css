@@ -10,12 +10,17 @@ html {
   font-size: 62.5%;
 }
 
+:root{
+	scroll-behavior: smooth;
+}
+
 body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 1.6rem;
   line-height: 1.7;
   color: #333;
   margin: 0 auto;
+  background-color: red;
 }
 
 .header {
@@ -106,3 +111,8 @@ body {
 .admin-user-greeting {
     font-weight: normal;
 }
+
+
+
+
+
