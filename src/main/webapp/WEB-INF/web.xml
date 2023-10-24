@@ -99,4 +99,14 @@
     <servlet-name>QuantityIncDecServlet</servlet-name>
     <url-pattern>/QuantityIncDecServlet</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>RemoveFromCartServlet</display-name>
+    <servlet-name>RemoveFromCartServlet</servlet-name>
+    <servlet-class>com.vegancakes.RemoveFromCartServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>RemoveFromCartServlet</servlet-name>
+    <url-pattern>/RemoveFromCartServlet</url-pattern>
+  </servlet-mapping>
 </web-app>

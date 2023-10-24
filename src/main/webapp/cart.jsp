@@ -77,6 +77,7 @@ if (cart_list != null){
             padding: 1rem;
             text-align: center;
             cursor: pointer;
+            text-decoration: none;
         }
 
         .remove-button {
@@ -116,12 +117,12 @@ if (cart_list != null){
                     <td><%=c.getCake_category() %></td>
                     <td><%=c.getCake_price() %></td>
                     <td>
-                        <a href="QuantityIncDecServlet" class="quantity-button">-</a>
-                        <input class="quantity-input" type="number" value="1" min="0">
-                        <a href="QuantityIncDecServlet" class="quantity-button">+</a>
+                        <a href="QuantityIncDecServlet?action=dec&id=<%=c.getId() %>" class="quantity-button">-</a>
+                        <input class="quantity-input" type="number" value="<%=c.getQuntity() %>" min="0">
+                        <a href="QuantityIncDecServlet?action=inc&id=<%=c.getId() %>" class="quantity-button">+</a>
                     </td>
                     <td>
-                        <a class="remove-button" href="#">Remove</a>
+                        <a class="remove-button" href="RemoveFromCartServlet?id=<%=c.getId() %>">Remove</a>
                     </td>
                 </tr>
             	<%}
