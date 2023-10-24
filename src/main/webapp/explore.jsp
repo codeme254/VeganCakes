@@ -3,11 +3,17 @@
 <%@ page import="com.vegancakes.dao.ProductDao" %>
 <%@ page import="com.vegancakes.connection.DbCon" %>
 <%@ page import="com.vegancakes.Product" %>
-<%@ page import="java.util.List" %>
+<%@ page import="com.vegancakes.Cart" %>
+<%@ page import="java.util.*" %>
 
 <%
 ProductDao pd = new ProductDao(DbCon.getConnection());
 List <Product> products = pd.getAllProducts();
+
+ArrayList<Cart> cart_list = (ArrayList<Cart>) session.getAttribute("cart-list");
+if (cart_list != null){
+	request.setAttribute("cart_list", cart_list);
+}
 %>
 <!DOCTYPE html>
 <html>

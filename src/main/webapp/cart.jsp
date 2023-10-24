@@ -9,10 +9,13 @@
 <%
 ArrayList<Cart> cart_list = (ArrayList<Cart>) session.getAttribute("cart-list");
 List<Cart> cartProduct = null;
+int total;
 if (cart_list != null){
 	ProductDao pDao = new ProductDao(DbCon.getConnection());
 	cartProduct = pDao.getCartProducts(cart_list);
+	total = pDao.getTotalCartPrice(cart_list);
 	request.setAttribute("cart_list", cart_list);
+	request.setAttribute("total",total);
 }
 
 %>
@@ -90,7 +93,7 @@ if (cart_list != null){
     <div class="cart-container">
         <div class="cart__header">
         	<div class="total-price">
-            	Total price $400
+            	Total price $ ${total}
         	</div>
         	<a class="checkout-button" href="#">Checkout</a>
         </div>
@@ -113,9 +116,9 @@ if (cart_list != null){
                     <td><%=c.getCake_category() %></td>
                     <td><%=c.getCake_price() %></td>
                     <td>
-                        <button class="quantity-button">-</button>
+                        <a href="QuantityIncDecServlet" class="quantity-button">-</a>
                         <input class="quantity-input" type="number" value="1" min="0">
-                        <button class="quantity-button">+</button>
+                        <a href="QuantityIncDecServlet" class="quantity-button">+</a>
                     </td>
                     <td>
                         <a class="remove-button" href="#">Remove</a>

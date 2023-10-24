@@ -89,4 +89,14 @@
     <servlet-name>AddToCartServlet</servlet-name>
     <url-pattern>/AddToCartServlet</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>QuantityIncDecServlet</display-name>
+    <servlet-name>QuantityIncDecServlet</servlet-name>
+    <servlet-class>com.vegancakes.QuantityIncDecServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>QuantityIncDecServlet</servlet-name>
+    <url-pattern>/QuantityIncDecServlet</url-pattern>
+  </servlet-mapping>
 </web-app>
