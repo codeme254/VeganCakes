@@ -41,7 +41,7 @@ public class LoginServlet extends HttpServlet {
                 request.getSession().setAttribute("lastName", resultSet.getString("last_name"));
                 request.getSession().setAttribute("contact", resultSet.getString("contact"));
                 request.getSession().setAttribute("location", resultSet.getString("location"));
-                response.sendRedirect("listing.jsp");
+                response.sendRedirect("explore.jsp");
             } else {
                 request.setAttribute("loginError", "Login was not successful. Please check your credentials.");
                 request.getRequestDispatcher("loginerror.html").forward(request, response);

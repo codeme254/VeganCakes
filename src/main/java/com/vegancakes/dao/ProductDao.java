@@ -39,4 +39,37 @@ public class ProductDao {
 		
 		return products;
 	}
+	
+	public List<Cart> getCartProducts(ArrayList<Cart> cartList) {
+		List<Cart> products = new ArrayList<Cart>();
+		try {
+			if (cartList.size() > 0) {
+				for (Cart item: cartList) {
+					query = "select * from Products where id = ?";
+					pst = this.con.prepareStatement(query);
+					pst.setInt(1, item.getId());
+					rs = pst.executeQuery();
+					while (rs.next()) {
+						Cart row = new Cart();
+						row.setId(rs.getInt("id"));
+						row.setCake_image(rs.getString("cake_image"));
+						row.setCake_name(rs.getString("cake_name"));
+						row.setCake_description(rs.getString("cake_description"));
+						row.setCake_category(rs.getString("cake_category"));
+						row.setCake_quantity(rs.getInt("cake_quantity"));
+						row.setCake_price(rs.getInt("cake_price")*item.getQuntity());
+						row.setQuntity(item.getQuntity());
+						products.add(row);
+					}
+				}
+			}
+		} catch(Exception e) {
+			System.out.println(e.getMessage());
+		}
+		return products;
+	}
 }
+
+
+
+

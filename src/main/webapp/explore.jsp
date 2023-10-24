@@ -116,6 +116,8 @@ List <Product> products = pd.getAllProducts();
 	border-radius: 5px;
 	margin: .5rem auto;
 	cursor: pointer;
+	text-align: center;
+	text-decoration: none;
 }
 </style>
 </head>
@@ -141,7 +143,7 @@ List <Product> products = pd.getAllProducts();
 					<p class="product_box--category">Category: <%= p.getCake_category() %></p>
 					<p><%=p.getCake_quantity() %> cakes left</p>
 				</div>
-				<button class="add-to-cart-button">Add to cart</button>
+				<a href="AddToCartServlet?id=<%=p.getId() %>" class="add-to-cart-button">Add to cart</a>
 			</div>
 		<%}
 	} else {
