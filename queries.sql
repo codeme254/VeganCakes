@@ -30,4 +30,31 @@ CREATE TABLE Products (
     cake_price INT CHECK (cake_price >= 1)
 );
 select * from Products;
+select cake_price from Products where id=1;
+
+CREATE TABLE orders (
+    o_id INT PRIMARY KEY AUTO_INCREMENT,
+    p_id INT NOT NULL,
+    u_id INT NOT NULL,
+    o_quantity INT NOT NULL,
+    o_date VARCHAR(80),
+    FOREIGN KEY (u_id) REFERENCES Users(user_id),
+    FOREIGN KEY (p_id) REFERENCES Products(id)
+);
+
+SELECT
+    u.first_name,
+    u.last_name,
+    u.location,
+    u.contact,
+    p.cake_name,
+    p.cake_price,
+    o.o_quantity AS quantity,
+    (p.cake_price * o.o_quantity) AS total
+FROM Users AS u
+INNER JOIN orders AS o ON u.user_id = o.u_id
+INNER JOIN Products AS p ON o.p_id = p.id;
+
+
+select * from orders;
 

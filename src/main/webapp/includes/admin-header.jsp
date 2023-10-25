@@ -12,9 +12,9 @@
             <div class="admin-header-right">
                 <nav class="admin-nav">
                     <ul class="admin-nav-list">
-                        <li class="admin-nav-item"><a href="all_products.html" class="admin-nav-link">All Products</a></li>
-                        <li class="admin-nav-item"><a href="vegan-cakes/new_product.jsp" class="admin-nav-link">New Product</a></li>
-                        <li class="admin-nav-item"><a href="all_orders.html" class="admin-nav-link">All Orders</a></li>
+                        <li class="admin-nav-item"><a href="admin_all_products.jsp" class="admin-nav-link">All Products</a></li>
+                        <li class="admin-nav-item"><a href="new_product.jsp" class="admin-nav-link">New Product</a></li>
+                        <li class="admin-nav-item"><a href="admin_all_orders_view.jsp" class="admin-nav-link">All Orders</a></li>
                     </ul>
                 </nav>
                 <p class="user-greeting admin-user-greeting">Hey, ${sessionScope.username}</p>

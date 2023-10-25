@@ -5,6 +5,7 @@
            <a href="cart.jsp">My Cart <span class="cart_quantity">${cart_list.size()}</span></a>
            <c:if test="${not empty firstName}">
                <p class="user-greeting">Howdy ${firstName}</p>
+
            </c:if>
        </div>
 </div>

@@ -96,7 +96,7 @@ if (cart_list != null){
         	<div class="total-price">
             	Total price $ ${total}
         	</div>
-        	<a class="checkout-button" href="#">Checkout</a>
+        	<a class="checkout-button" href="CheckOutServlet">Checkout</a>
         </div>
 
         <table>

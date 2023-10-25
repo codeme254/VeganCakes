@@ -36,7 +36,13 @@ public class LoginServlet extends HttpServlet {
             ResultSet resultSet = preparedStatement.executeQuery();
 
             if (resultSet.next()) {
+//            	String mail = resultSet.getString("email");
+//            	int user_id = resultSet.getInt("user_id");
+
+//            	System.out.println("Email: " + mail);
+//            	System.out.println("User ID: " + user_id);
                 request.getSession().setAttribute("user", resultSet.getString("email"));
+                request.getSession().setAttribute("user_id", resultSet.getInt("user_id"));
                 request.getSession().setAttribute("firstName", resultSet.getString("first_name"));
                 request.getSession().setAttribute("lastName", resultSet.getString("last_name"));
                 request.getSession().setAttribute("contact", resultSet.getString("contact"));
